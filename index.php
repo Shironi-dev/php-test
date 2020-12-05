@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
 </head>
 <body>
 <div class="container">
@@ -22,10 +21,10 @@
     <div class="panel-body">
     <form name="CTF" method="GET" action="">
       <label>ตัวเลขตัวที่ 1</label>
-        <input name="n1" class="form-control form-control-lg" placeholder="ตัวเลขตัวที่ 1" type="text" required>
+        <input id = "n1" name="n1" class="form-control form-control-lg" placeholder="ตัวเลขตัวที่ 1" type="text" required>
         </br>
         <label>ตัวเลขตัวที่ 2</label>
-        <input name="n2" class="form-control form-control-lg" placeholder="ตัวเลขตัวที่ 2" type="text" required>
+        <input id = "n2" name="n2" class="form-control form-control-lg" placeholder="ตัวเลขตัวที่ 2" type="text" required>
         </br>
         <div class="container">
             <div class="row">
@@ -84,5 +83,14 @@
     </div>
     </div>
 </div>
+        <script>
+var url_string = window.location;
+var url = new URL(url_string);
+var n1 = url.searchParams.get("n1");
+var n2 = url.searchParams.get("n2")
+        document.getElementById("n1").value = n1;
+        document.getElementById("n2").value = n2;
+        
+        </script>
 </body>
 </html>
