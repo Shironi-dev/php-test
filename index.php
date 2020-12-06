@@ -26,7 +26,7 @@
       error_reporting(0);
           function ctof(){
             $n1 = $_GET["n1"];
-            $result = number_format((1.8 × $n1) + 32),2);
+            $result = number_format((1.8 * $n1) + 32),2);
             echo '<div class="alert alert-success" role="alert">'.$result.' F '.'</div>';
           }
       if(isset($_GET["n1"])) {
